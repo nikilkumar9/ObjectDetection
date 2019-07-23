@@ -125,6 +125,7 @@ def DetectObjectsImages(inputFolder, outputFolder):
 
 				# Save image
 				cv2.imwrite(imagePath.replace(inputFolder, outputFolder), result)
+				print("Processed image: {0}".format(os.path.basename(imagePath)))
 
 
 def ObjectDetectionScreen():
@@ -147,7 +148,7 @@ def ObjectDetectionScreen():
 			break
 
 
-### Webcam Input
+## Webcam Input
 DetectObjectsWebcam()
 
 #### Image Input
