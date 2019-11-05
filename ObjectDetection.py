@@ -87,7 +87,7 @@ def DetectObjectsWebcam():
 	# while True:
 	# 	# Read Webcam input
 	# 	_, frame = capture.read()
-	# 	frame = cv2.imread('messi5.jpg',0)
+	# 	frame = cv2.imread('C:\Users\nsenthilk2\Desktop\buses.jpg',0)
 	# 	# Run detection
 	# 	result = RunDetection(frame)
 	# 	# Show result
