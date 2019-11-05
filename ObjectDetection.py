@@ -79,19 +79,24 @@ def RunDetection(image):
 def DetectObjectsWebcam():
 	"""Detect objects in webcam stream."""
 	# Load webcam 
-	capture = cv2.VideoCapture(0)
-	while True:
-		# Read Webcam input
-		_, frame = capture.read()
-		# Run detection
-		result = RunDetection(frame)
-		# Show result
-		cv2.imshow('Object Detection', result)
-		# Listen for abort
-		if cv2.waitKey(1) & 0xFF == ord('q'):
-			cv2.destroyAllWindows()
-			capture.release()
-			break
+	# capture = cv2.VideoCapture(0)
+	frame = cv2.imread('messi5.jpg', 0)
+	result = RunDetection(frame)
+	cv2.imshow('Object Detection', result)
+
+	# while True:
+	# 	# Read Webcam input
+	# 	_, frame = capture.read()
+	# 	frame = cv2.imread('messi5.jpg',0)
+	# 	# Run detection
+	# 	result = RunDetection(frame)
+	# 	# Show result
+	# 	cv2.imshow('Object Detection', result)
+	# 	# Listen for abort
+	# 	if cv2.waitKey(1) & 0xFF == ord('q'):
+	# 		cv2.destroyAllWindows()
+	# 		capture.release()
+	# 		break
 
 
 def DetectObjectsImages(inputFolder, outputFolder):
